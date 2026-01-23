@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>M-EXE Store | Yetkililer</title>
+
+<style>
+:root{
+  --bg:#0b0b0f;
+  --card:#14141c;
+  --neon:#8b5cf6;
+  --text:#e5e7eb;
+  --muted:#9ca3af;
+}
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:Arial, Helvetica, sans-serif;
+}
+
+body{
+  background:linear-gradient(120deg,#07070a,#0b0b12);
+  color:var(--text);
+  min-height:100vh;
+}
+
+/* ANIMATION */
+.fade{
+  animation:fadeIn .8s ease forwards;
+}
+
+@keyframes fadeIn{
+  from{opacity:0;transform:translateY(20px)}
+  to{opacity:1;transform:translateY(0)}
+}
+
+/* HEADER */
+header{
+  padding:25px;
+  text-align:center;
+}
+
+header a{
+  color:var(--neon);
+  text-decoration:none;
+  font-size:14px;
+}
+
+header h1{
+  margin-top:10px;
+  color:var(--neon);
+  letter-spacing:2px;
+}
+
+/* STAFF */
+.section{
+  max-width:1000px;
+  margin:auto;
+  padding:40px 20px;
+}
+
+.staff{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+  gap:25px;
+}
+
+.staff-card{
+  background:var(--card);
+  border-radius:18px;
+  padding:25px 20px;
+  text-align:center;
+  transition:.35s;
+  box-shadow:0 0 20px rgba(0,0,0,.6);
+}
+
+.staff-card:hover{
+  transform:translateY(-10px) scale(1.02);
+  box-shadow:0 0 30px rgba(139,92,246,.5);
+}
+
+.staff-card img{
+  width:110px;
+  height:110px;
+  border-radius:50%;
+  object-fit:cover;
+  border:3px solid var(--neon);
+  margin-bottom:15px;
+}
+
+.staff-card h3{
+  margin-bottom:6px;
+  color:#fff;
+}
+
+.role{
+  font-size:14px;
+  color:var(--neon);
+}
+
+/* CREATED BY EXILE */
+.exile{
+  position:fixed;
+  right:15px;
+  bottom:15px;
+  background:rgba(0,0,0,0.7);
+  padding:8px 14px;
+  border-radius:20px;
+  font-size:12px;
+  color:var(--neon);
+  border:1px solid var(--neon);
+  animation:pulse 2.5s infinite;
+}
+
+@keyframes pulse{
+  0%{box-shadow:0 0 5px var(--neon)}
+  50%{box-shadow:0 0 15px var(--neon)}
+  100%{box-shadow:0 0 5px var(--neon)}
+}
+</style>
+</head>
+
+<body class="fade">
+
+<header>
+  <a href="index.html">← Ana Sayfa</a>
+  <h1>Yetkililer</h1>
+</header>
+
+<section class="section">
+  <div class="staff">
+
+    <div class="staff-card">
+      <img src="yetkili1.png" alt="Exile">
+      <h3>Exile</h3>
+      <span class="role">Kurucu • Developer</span>
+    </div>
+
+    <div class="staff-card">
+      <img src="yetkili2.png" alt="Raven">
+      <h3>Raven</h3>
+      <span class="role">Yetkili • Satış Sorumlusu</span>
+    </div>
+
+  </div>
+</section>
+
+<div class="exile">Created By Exile</div>
+
+</body>
+</html>
